@@ -11,6 +11,8 @@ CREATE TABLE CelestialBody (
     radius_km REAL NOT NULL,
     mass_M REAL NOT NULL,
     system_id INTEGER NOT NULL,
+    apoapsis_au REAL NOT NULL,
+    periapsis_au REAL NOT NULL,
     FOREIGN KEY (system_id) REFERENCES StarSystem(id)
 );
 
@@ -24,6 +26,7 @@ CREATE TABLE User (
     id INTEGER PRIMARY KEY,
     username TEXT NOT NULL,
     password TEXT NOT NULL,
+    last_login TEXT NOT NULL,
     is_admin BOOLEAN NOT NULL
 );
 
