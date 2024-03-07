@@ -4,9 +4,9 @@
 entity "StarSystem" {
   *id
   --
-  *x
-  *y
-  *z
+  * x
+  * y
+  * z
 }
 
 entity "CelestialBody" {
