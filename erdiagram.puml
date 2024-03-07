@@ -1,0 +1,43 @@
+@startuml er_diagram
+!theme plain
+
+entity "StarSystem" {
+  *id
+  --
+  *x
+  *y
+  *z
+}
+
+entity "CelestialBody" {
+  *id
+  --
+  *temperature_K
+  *radius_km
+  *mass_M
+  *apoapsis_au
+  *periapsis_au
+  -names
+}
+
+entity "User" {
+  *id
+  *username
+  --
+  *password
+  *last_login
+  *is_admin
+}
+
+entity "List" {
+  *id
+  --
+  *name
+}
+
+StarSystem "1" ||--o{ "n" CelestialBody : "contains"
+User "1" --o{ "n" List : "owns"
+CelestialBody "n" }-- "m" List : "included in"
+CelestialBody "n" }-- "1" CelestialBody : "orbiting"
+
+@enduml
