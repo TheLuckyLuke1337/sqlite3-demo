@@ -10,10 +10,13 @@ CREATE TABLE CelestialBody (
     temperature_K REAL NOT NULL,
     radius_km REAL NOT NULL,
     mass_M REAL NOT NULL,
+    body_class TEXT NOT NULL,
     system_id INTEGER NOT NULL,
-    apoapsis_au REAL NOT NULL,
-    periapsis_au REAL NOT NULL,
-    FOREIGN KEY (system_id) REFERENCES StarSystem(id)
+    apoapsis_au REAL,
+    periapsis_au REAL,
+    orbiting INTEGER,
+    FOREIGN KEY (system_id) REFERENCES StarSystem(id),
+    FOREIGN KEY (orbiting) REFERENCES CelestialBody(id)
 );
 
 CREATE TABLE CelestialBodyNames (
