@@ -17,11 +17,20 @@ def hms_to_rad(hms_str):
 
 
 def polar2cartesian(ra, dec, distance):
+     
     ra = Angle(ra, unit='hourangle')
     dec = Angle(dec, unit='deg')
+    
     ra_rad = ra.radian
     dec_rad = dec.radian
-    print(type(ra_rad), type(dec_rad))
+    
+    print(dec)
+    print(dec_rad)
+
+    ra_list = list(ra_rad)
+    dec_list = list(dec_rad)
+    distance_list = list(distance)
+
     x = distance * np.cos(dec_rad) * np.cos(ra_rad)
     y = distance * np.cos(dec_rad) * np.sin(ra_rad)
     z = distance * np.sin(dec_rad)
