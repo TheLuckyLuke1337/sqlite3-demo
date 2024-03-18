@@ -6,12 +6,12 @@ CREATE TABLE StarSystem (
 );
 
 CREATE TABLE CelestialBody (
-    id INTEGER PRIMARY KEY,
-    temperature_K REAL NOT NULL,
-    radius_km REAL NOT NULL,
-    mass_M REAL NOT NULL,
-    body_class TEXT NOT NULL,
-    system_id INTEGER NOT NULL,
+    id INTEGER NOT NULL PRIMARY KEY,
+    temperature_K REAL,
+    radius_km REAL,
+    flux_V REAL,
+    body_class TEXT,
+    system_id INTEGER,
     apoapsis_au REAL,
     periapsis_au REAL,
     orbiting INTEGER,

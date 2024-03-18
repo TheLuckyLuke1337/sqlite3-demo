@@ -14,7 +14,7 @@ entity "CelestialBody" {
   --
   *temperature_K
   *radius_km
-  *mass_M
+  *flux_V
   *apoapsis_au
   *periapsis_au
   *body_class
