@@ -11,7 +11,7 @@ CREATE TABLE CelestialBody (
     radius_km REAL,
     flux_V REAL,
     body_class TEXT,
-    system_id INTEGER,
+    system_id INTEGER NOT NULL,
     apoapsis_au REAL,
     periapsis_au REAL,
     orbiting INTEGER,
@@ -20,7 +20,7 @@ CREATE TABLE CelestialBody (
 );
 
 CREATE TABLE CelestialBodyNames (
-    name TEXT NOT NULL PRIMARY KEY,
+    body_name TEXT NOT NULL PRIMARY KEY,
     body_id INTEGER NOT NULL,
     FOREIGN KEY (body_id) REFERENCES CelestialBody(id)
 );
