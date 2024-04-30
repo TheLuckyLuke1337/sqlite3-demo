@@ -27,7 +27,7 @@ CREATE TABLE CelestialBodyNames (
 
 CREATE TABLE User (
     id INTEGER PRIMARY KEY,
-    username TEXT NOT NULL,
+    username TEXT NOT NULL UNIQUE,
     password TEXT NOT NULL,
     last_login TEXT NOT NULL,
     is_admin BOOLEAN NOT NULL
