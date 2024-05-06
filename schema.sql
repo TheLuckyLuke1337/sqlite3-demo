@@ -7,6 +7,7 @@ CREATE TABLE StarSystem (
 
 CREATE TABLE CelestialBody (
     id INTEGER NOT NULL PRIMARY KEY,
+    main_name TEXT NOT NULL UNIQUE,
     temperature_K REAL,
     radius_km REAL,
     flux_V REAL,
