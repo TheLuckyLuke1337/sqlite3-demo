@@ -18,6 +18,7 @@ entity "CelestialBody" {
   *apoapsis_au
   *periapsis_au
   *body_class
+  *main_name
   -names
 }
 
