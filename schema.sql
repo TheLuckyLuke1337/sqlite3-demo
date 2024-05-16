@@ -11,6 +11,7 @@ CREATE TABLE CelestialBody (
     temperature_K REAL,
     radius_km REAL,
     flux_V REAL,
+    main_class TEXT,
     body_class TEXT,
     system_id INTEGER NOT NULL,
     apoapsis_au REAL,
@@ -28,7 +29,7 @@ CREATE TABLE CelestialBodyNames (
 
 CREATE TABLE User (
     id INTEGER PRIMARY KEY,
-    username TEXT NOT NULL UNIQUE,
+    username TEXT UNIQUE NOT NULL,
     password TEXT NOT NULL,
     last_login TEXT NOT NULL,
     is_admin BOOLEAN NOT NULL

@@ -1,0 +1,1 @@
+SELECT * FROM ListEntry LEFT JOIN CelestialBody ON ListEntry.body_id = CelestialBody.id; 
